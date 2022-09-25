@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Desktop" verbose="1" >
+    <test name="Test desktop" >
+        <groups>
+            <run>
+                <exclude name="Mobile"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.BasicAjaxTest"/>
+            <class name="tests.RedirectTest"/>
+            <class name="tests.RefreshTest"/>
+            <class name="tests.DynamicButtonsSimpleTest"/>
+            <class name="tests.DynamicButtonsDisabledTest"/>
+        </classes>
+    </test>
+
+
+</suite>
+
