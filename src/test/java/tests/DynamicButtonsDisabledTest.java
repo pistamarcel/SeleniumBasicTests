@@ -6,8 +6,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 import static PageObjects.DynamicButtonsDisabledPage.*;
-import static PageObjects.DynamicButtonsSimplePage.*;
-import static PageObjects.DynamicButtonsSimplePage.Message_BUTTON_CSS;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 

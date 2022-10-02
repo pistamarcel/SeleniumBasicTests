@@ -1,18 +1,9 @@
 package tests;
 
 import PageObjects.RefreshPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
-
 import static PageObjects.RefreshPage.*;
-import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertNotEquals;
 

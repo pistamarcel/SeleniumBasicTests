@@ -1,23 +1,21 @@
 package tests;
 
 import driver.DriverConfig;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.net.MalformedURLException;
 import java.time.Duration;
 
 public class BaseTest {
-    protected ChromeDriver driver = null;
+    protected RemoteWebDriver driver = null;
 
     @BeforeMethod(onlyForGroups = {"Desktop"})
-    public void beforeMethodWithLogin() {
-        driver = DriverConfig.getChromeDriverForDesktop();
+    public void beforeMethodWithLogin() throws MalformedURLException {
+        driver = DriverConfig.getRemoteChromeDriver();
 
 
 
@@ -35,7 +33,7 @@ public class BaseTest {
             driver.quit();
         }
     }
-    protected FluentWait<ChromeDriver> getWait(ChromeDriver driver){
+    protected FluentWait<RemoteWebDriver> getWait(RemoteWebDriver driver){
         return new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10))
                 .pollingEvery(Duration.ofMillis(500))
                 .ignoring(StaleElementReferenceException.class);

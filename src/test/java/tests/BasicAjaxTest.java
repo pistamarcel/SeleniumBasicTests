@@ -2,13 +2,9 @@ package tests;
 
 import PageObjects.BasicAjaxPage;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
 
 import static PageObjects.BasicAjaxPage.LOAD_IMAGE_ID;
 import static PageObjects.BasicAjaxPage.START_PAGE_URL_AJAX;
